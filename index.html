@@ -37,11 +37,13 @@
 
 				<div class="client-card__section-wrap">
 					<ul class="client-card__section client-card__task-info">
-						<li><b>Тип задания:</b> согласование условий</li>
-						<li><b>Группа очередей:</b> согласование условий</li>
-						<li><b>Баллов за успешно выполненное задание:</b> 1,6</li>
-						<li><b>Описание:</b> Совершается обзвон клиентов банка с целью согласования условий на КК
-							Tinkoff Platinum/Кредит наличными</li>
+						<li><b>Тип задания:</b> Согласование условий</li>
+						<li><b>Группа очередей:</b> All airlines(Теплая база) </li>
+						<li><b>Очередь:</b> Aпселл АА </li>
+						<li><b>Баллов за успешно выполненное задание: </b> 4,90 </li>
+						<li><b>Описание:</b>
+							Совершается обзвон клиентов банка с целью согласования условий
+							на программу лояльности Platinum или All Airlines для кредитной карты . </li>
 					</ul>
 					<div class="client-card__section hidden client-card__history history">
 						<div class="history__title"> <b>Дата создания:</b> 01.07.2019 16:59:19 мск</div>
@@ -59,10 +61,10 @@
 								01.07.2019 17:00:25 мск
 							</div>
 							<div class="history__cell history__call-type">
-								Исходящий звонок (мобильный)
+								Исходящий звонок (Мобильный)
 							</div>
 							<div class="history__cell history__result">
-								Дозвон, Перезвонить, По просьбе клиента/3-го лица
+								Дозвон, Отложить, По просьбе клиента/3-го лица
 							</div>
 							<div class="history__cell history__now">
 								<b>Сейчас</b>
@@ -146,19 +148,21 @@
 							</h2>
 							<hr class="actions__split">
 
-							<select class="select conditions__select-type-credit">
-								<option class="select select-credit-item" selected="selected" disabled>Выберите кредит
-								</option>
-								<option class="select select-credit-item" value="Кредитная карта">Кредитная карта
-								</option>
-								<option class="select select-credit-item" value="Кредит наличными">Кредит наличными
-								</option>
-								<option class="select select-credit-item" disabled value="Автокредит">Автокредит
-								</option>
-								<option class="select select-credit-item" disabled
-									value="Кредит под залог недвижимости">Кредит под залог недвижимости</option>
-							</select>
-						</div>
+                            <label>
+                                <select class="select conditions__select-type-credit">
+                                    <option class="select select-credit-item" selected="selected" disabled>Выберите кредит
+                                    </option>
+                                    <option class="select select-credit-item" value="Кредитная карта">Кредитная карта
+                                    </option>
+                                    <option class="select select-credit-item" value="Кредит наличными">Кредит наличными
+                                    </option>
+                                    <option class="select select-credit-item" disabled value="Автокредит">Автокредит
+                                    </option>
+                                    <option class="select select-credit-item" disabled
+                                        value="Кредит под залог недвижимости">Кредит под залог недвижимости</option>
+                                </select>
+                            </label>
+                        </div>
 
 						<div id="credit_1" class="conditions__click-string-wrap conditions__step hidden">
 							<label class="actions__click-string">
@@ -202,15 +206,15 @@
 										<label class="own-calc-credit__option-text">
 											Сумма в рублях
 										</label>
-										<input id='sumCredit' class="own-calc-credit__option-input" type="number"
-											value="86000">
+                                        <label for='sumCredit'></label><input id='sumCredit' class="own-calc-credit__option-input" type="number"
+                                                                              value="86000">
 									</div>
 									<div class="own-calc-credit__option-wrap">
 										<label class="own-calc-credit__option-text">
 											Срок в месяцах
 										</label>
-										<input id='periodCredit' class="own-calc-credit__option-input" type="number"
-											value="36">
+                                        <label for='periodCredit'></label><input id='periodCredit' class="own-calc-credit__option-input" type="number"
+                                                                                 value="36">
 									</div>
 								</div>
 
@@ -349,8 +353,10 @@
 							<p>
 								<b>Комментарий для представителя</b>
 							</p>
-							<textarea class="text-input" name="comment" cols="50" rows="10"></textarea>
-							<div class="appointment__buttons">
+                            <label>
+                                <textarea class="text-input" name="comment" cols="50" rows="10"></textarea>
+                            </label>
+                            <div class="appointment__buttons">
 								<input class="btn btn_blue" type="button" value="Назначить встречу"	data-click="make_meeting_final">
 								<input class="btn btn_gray" type="button" value="Другое место/время" data-click="show_adress">
 							</div>
@@ -392,8 +398,10 @@
 										<p>
 											<b>Адрес<mark class="span-red">*</mark></b>
 										</p>
-										<input class="adress__enter-address-input" type="text" size="40" placeholder="Адрес">
-									</div>
+                                        <label>
+                                            <input class="adress__enter-address-input" type="text" size="40" placeholder="Адрес">
+                                        </label>
+                                    </div>
 								</div>
 
 								<div class="adress__buttons-list">
@@ -415,18 +423,24 @@
 									<p>
 										<b>Дата</b><mark class="span-red">*</mark>
 									</p>
-									<input class="text-input" type="date" name="date" placeholder="Дата" required>
+                                    <label>
+                                        <input class="text-input" type="date" name="date" placeholder="Дата" required>
+                                    </label>
 
-									<p>
+                                    <p>
 										<b>Временной интервал</b><mark class="span-red">*</mark>
 									</p>
-									<input class="text-input" size="40" placeholder="15:00 - 17:00">
+                                    <label>
+                                        <input class="text-input" size="40" placeholder="15:00 - 17:00">
+                                    </label>
 
-									<p>
+                                    <p>
 										<b>Комментарий <br>для представителя</b>
 									</p>
-									<textarea class="text-input" name="ff3" cols="40" rows="5" placeholder="Код домофона, подъезд, другое..."></textarea>
-								</div>
+                                    <label>
+                                        <textarea class="text-input" name="ff3" cols="40" rows="5" placeholder="Код домофона, подъезд, другое..."></textarea>
+                                    </label>
+                                </div>
 								<button class="btn btn_blue" type="submit" data-click="make_meeting_final">
 									Подтвердить встречу
 								</button>
@@ -446,8 +460,10 @@
 									<b>Баллов за задание: 1,30</b>
 								</div>
 								<p class="modal__check">
-									<input type="checkbox" checked>
-									Ожидать следующий звонок
+                                    <label>
+                                        <input type="checkbox" checked>
+                                    </label>
+                                    Ожидать следующий звонок
 								</p>
 								<div class="modal__buttons-wrap">
 									<button class="btn btn_blue" type="submit" data-click="reload">
@@ -496,9 +512,11 @@
 								<p class="actions__comment-title">
 									Комментарий:
 								</p>
-								<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
-								</textarea>
-							</div>
+                                <label>
+<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
+</textarea>
+                                </label>
+                            </div>
 						</div>
 						<hr class="actions__split">
 						<button class="btn btn_blue" type="submit">
@@ -558,9 +576,11 @@
 								<p class="actions__comment-title">
 									Комментарий:
 								</p>
-								<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
-								</textarea>
-							</div>
+                                <label>
+<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
+</textarea>
+                                </label>
+                            </div>
 						</div>
 						<hr class="actions__split">
 						<button class="btn btn_blue" type="submit">
@@ -590,9 +610,11 @@
 									Время перезвона выбрано
 								</label>
 								<div class="recall__time-choice hidden">
-									<input class="time-input" type="text" name="recall" placeholder="ДД.ММ.ГГГГ ЧЧ:ММ"
-										required="required">
-									<label class="actions__click-string">
+                                    <label>
+                                        <input class="time-input" type="text" name="recall" placeholder="ДД.ММ.ГГГГ ЧЧ:ММ"
+                                            required="required">
+                                    </label>
+                                    <label class="actions__click-string">
 										<input class="actions__click-input" type="checkbox" name="recall">
 										Отложить себе
 									</label>
@@ -602,9 +624,11 @@
 								<p class="actions__comment-title">
 									Комментарий:
 								</p>
-								<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
-								</textarea>
-							</div>
+                                <label>
+<textarea class="textarea textarea_width-100" name="perezvon" rows="4">
+</textarea>
+                                </label>
+                            </div>
 						</div>
 						<hr class="actions__split">
 						<button class="btn btn_blue" type="submit">
@@ -618,9 +642,11 @@
 								<p class="actions__comment-title">
 									Комментарий:
 								</p>
-								<textarea class="textarea" rows="4" cols="45" maxlength="500">
-								</textarea>
-							</div>
+                                <label>
+<textarea class="textarea" rows="4" cols="45" maxlength="500">
+</textarea>
+                                </label>
+                            </div>
 						</div>
 						<div class="padding-left-15">
 							<button class="btn btn_blue" type="submit">
@@ -643,27 +669,39 @@
 			</div>
 			<div id="m_a__more_actions_open">
 				<div>
-					<p><input type="checkbox" id="change_data" onclick="change_data()">Изменение данных</p>
+					<p>
+                        <label for="change_data"></label>
+                        <input type="checkbox" id="change_data" onclick="change_data()">Изменение данных</p>
 					<div id="change_data__wrap">
 						<div class="datetime">
-							<p><b>Дата обработки:</b><input type="datetime"></p>
+							<p class="span-bold">Дата обработки:
+							<label>
+								<input type="datetime-local">
+							</label></p>
 						</div>
 						<div>
 							<p><b>Комментарий: <span class="span-red"></span></b></p>
 						</div>
-						<div><textarea rows="3" cols="45" maxlength="300"></textarea></div>
+						<div><label>
+                            <textarea rows="3" cols="45" maxlength="300"></textarea>
+                        </label></div>
 					</div>
 				</div>
 				<div>
-					<p><input type="checkbox" id="ch_comliance" onclick="ch_comliance()">Претензия</p>
+					<p><label for="ch_comliance"></label>
+                        <input type="checkbox" id="ch_comliance" onclick="ch_comliance()">Претензия</p>
 					<div id="m_a_comliance">
 						<div class="datetime">
-							<p><b>Дата обработки:</b><input type="datetime"></p>
+							<p class="span-bold">Дата обработки:<label>
+								<input type="datetime-local">
+							</label></p>
 						</div>
 						<div>
 							<p><b>Комментарий: <span class="span-red"></span></b></p>
 						</div>
-						<div><textarea rows="3" cols="45" maxlength="300"></textarea></div>
+						<div><label>
+							<textarea rows="3" cols="45" maxlength="300"></textarea>
+						</label></div>
 					</div>
 				</div>
 				<button type="submit" class="save btn btn_gray">Сохранить</button>
@@ -677,7 +715,7 @@
 			<div id="comliance__open">
 				<p><b>Претензия<span class="span-red">*</span></b></p>
 				<div id="comliance__select">
-					<select id="comp__sel" class="select" name="comp" size="1">
+					<label for="comp__sel"></label><select id="comp__sel" class="select" name="comp" size="1">
 						<option value=""></option>
 						<option value="Оформление заявки">Оформление заявки</option>
 						<option value="Доставка карты/документов">Доставка карты/документов</option>
@@ -685,12 +723,18 @@
 				</div>
 				<br>
 				<p><b>Описание со слов клиента<span class="span-red">*</span></b></p>
-				<div class="div_textarea_compl"><textarea rows="3" cols="45" maxlength="300"></textarea></div>
+				<div class="div_textarea_compl"><label>
+					<textarea rows="3" cols="45" maxlength="300"></textarea>
+				</label></div>
 				<p><b>Дата и время со слов клиента</b></p>
 				<div class="datetime">
-					<p><b>Дата обработки:</b><input type="datetime"></p>
+					<p class="span-bold">Дата обработки:<label>
+						<input type="datetime-local">
+					</label></p>
 				</div>
-				<p><input type="checkbox">Проинформировать клиента о рассмотрении</p>
+				<p><label>
+                    <input type="checkbox">
+                </label>Проинформировать клиента о рассмотрении</p>
 				<button class="btn btn_blue" type="submit" id="confirm_compliance">Отправить претензию</button>
 			</div>
 			<div id="m_a__map1" onclick="m_a__map1()">
